@@ -1,4 +1,18 @@
-<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Stencil Component Starter</title> <link rel="modulepreload" href="/build/p-4c1565d9.js"><link rel="modulepreload" href="/build/p-7juW-HqC.js"><script type="module" src="/build/p-4c1565d9.js" data-stencil data-resources-url="/build/" data-stencil-namespace="gsl"></script> <script nomodule="" src="/build/gsl.js" data-stencil></script> <link rel="stylesheet" href="/build/p-8ccaa7fb.css"> <style>html,
+<!doctype html>
+<html dir="ltr" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <title>Stencil Component Starter</title>
+    <link rel="modulepreload" href="./build/p-4c1565d9.js">
+    <link rel="modulepreload" href="./build/p-7juW-HqC.js">
+    <script type="module" src="./build/p-4c1565d9.js" data-stencil data-resources-url="./build/"
+      data-stencil-namespace="gsl"></script>
+    <script nomodule="" src="./build/gsl.js" data-stencil></script>
+    <link rel="stylesheet" href="./build/p-8ccaa7fb.css">
+    <style>
+      html,
       body {
         margin: 0;
         padding: 0;
@@ -36,6 +50,7 @@
         flex-direction: column;
         gap: .5rem;
       }
+
       .quick-actions-row {
         button {
           background: none;
@@ -43,35 +58,56 @@
           font-weight: bold;
           color: white;
           border: none;
+
           &:hover {
             text-decoration: underline;
           }
         }
       }
+
       .school-picker-button {
         display: flex;
         flex-direction: row;
         align-items: stretch;
         gap: .5rem;
         background: none;
-          outline: none;
-          font-weight: bold;
-          color: white;
-          border: none;
-          &:hover {
-            text-decoration: underline;
-          }
+        outline: none;
+        font-weight: bold;
+        color: white;
+        border: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
         span {
           display: block;
           margin: auto;
           margin-top: .25rem;
         }
       }
+
       .school-picker-row {
         display: flex;
         justify-content: flex-end;
 
-      }</style> </head> <body> <gsl-shell navigation-data="navData" current-path="/test-page-1" logo-src="test-assets/images/logo.svg"> <div class="gsl-header-right-actions" slot="header-right"> <div class="school-picker-row"><button class="school-picker-button"><span>Paris, Liam at Weatherly, PA</span> <img src="test-assets/images/School.svg"></button></div> <div class="quick-actions-row"> <button> Help </button> <button> Terms of Use </button> <button> Contact Help Desk </button> <button> Logout </button> </div> </div> <main id="main-content"> <h1 id="route-output">Loading...</h1> </main> </gsl-shell> <script src="test-assets/temp-nav.js"></script> <script>
+      }
+    </style>
+  </head>
+
+  <body> <gsl-shell navigation-data="navData" current-path="/test-page-1" logo-src="test-assets/images/logo.svg">
+      <div class="gsl-header-right-actions" slot="header-right">
+        <div class="school-picker-row"><button class="school-picker-button"><span>Paris, Liam at Weatherly, PA</span>
+            <img src="test-assets/images/School.svg"></button></div>
+        <div class="quick-actions-row"> <button> Help </button> <button> Terms of Use </button> <button> Contact Help
+            Desk </button> <button> Logout </button> </div>
+      </div>
+      <main id="main-content">
+        <h1 id="route-output">Loading...</h1>
+      </main>
+    </gsl-shell>
+    <script src="test-assets/temp-nav.js"></script>
+    <script>
       if ('serviceWorker' in navigator && location.protocol !== 'file:') {
         navigator.serviceWorker.getRegistration().then(function (registration) {
           if (registration) {
@@ -79,4 +115,7 @@
           }
         });
       }
-    </script> </body></html>
+    </script>
+  </body>
+
+</html>
