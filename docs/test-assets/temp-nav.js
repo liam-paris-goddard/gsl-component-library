@@ -503,7 +503,8 @@ const navData = [{
 function syncPageTitleFromNavData() {
   const shell = document.querySelector('gsl-shell');
   const currentPath = window.location.pathname || '/';
-  const pathToFind = `./${currentPath.split('/')[0]}`
+  const split = currentPath.split('/')
+  const pathToFind = `./${split[split.length - 1]}`
   console.warn(pathToFind)
   function findTitle(items) {
     for (const item of items) {
@@ -530,7 +531,8 @@ function syncCurrentPathToSideNav() {
 
   // Get pathname and normalize
   const currentPath = window.location.pathname || '/';
-  const pathToFind = `./${currentPath.split('/')[0]}`
+  const split = currentPath.split('/')
+  const pathToFind = `./${split[split.length - 1]}`
   // Set it as the `currentPath` prop
   shell.currentPath = pathToFind;
 }
