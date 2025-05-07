@@ -505,11 +505,12 @@ function syncPageTitleFromNavData() {
   const currentPath = window.location.pathname || '/';
   const split = currentPath.split('/')
   const pathToFind = `./${split[split.length - 1]}`
-  console.warn(pathToFind)
+
   function findTitle(items) {
     for (const item of items) {
-      console.warn(item.href)
+      console.warn('looking at: ', item.href)
       if (item.href === pathToFind) {
+        console.warn('returning a match');
         return item.title;
       }
       if (item.children) {
@@ -519,7 +520,7 @@ function syncPageTitleFromNavData() {
     }
     return null;
   }
-
+  console.warn('looking for: ', pathToFind)
   const title = findTitle(shell.navigationData);
   if (title) {
     shell.pageTitle = title;
