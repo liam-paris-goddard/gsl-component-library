@@ -504,8 +504,10 @@ function syncPageTitleFromNavData() {
   const shell = document.querySelector('gsl-shell');
   const currentPath = window.location.pathname || '/';
   const pathToFind = `./${currentPath.split('/')[0]}`
+  console.warn(pathToFind)
   function findTitle(items) {
     for (const item of items) {
+      console.warn(item.href)
       if (item.href === pathToFind) {
         return item.title;
       }
