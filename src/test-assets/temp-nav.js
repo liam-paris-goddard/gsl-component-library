@@ -361,12 +361,6 @@ const navData = [
                 "title": "By         Program",
                 "href": "/Accounting/Ledger/Programs.aspx"
               },
-              {
-                "title": ""
-              },
-              {
-                "title": "Show Parent Ledger Popup"
-              }
             ]
           },
           {

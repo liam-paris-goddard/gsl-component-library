@@ -9,17 +9,19 @@ function getIcon(name) {
           <path d="M8 11L3 6.00005L3.7 5.30005L8 9.60005L12.3 5.30005L13 6.00005L8 11Z" fill="currentColor"/>
         </svg>
       `;
-        case 'lock-open':
+        case 'pin':
             return `
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 1.25C17.4162 1.25 19.375 3.20875 19.375 5.625V8.75C19.375 9.09518 19.0952 9.375 18.75 9.375C18.4048 9.375 18.125 9.09518 18.125 8.75V5.625C18.125 3.89911 16.7259 2.5 15 2.5C13.2741 2.5 11.875 3.89911 11.875 5.625V8.125C13.2557 8.125 14.375 9.24429 14.375 10.625V16.25C14.375 17.6307 13.2557 18.75 11.875 18.75H3.125C1.74429 18.75 0.625 17.6307 0.625 16.25V10.625C0.625 9.24429 1.74429 8.125 3.125 8.125H10.625V5.625C10.625 3.20875 12.5838 1.25 15 1.25Z" fill="currentColor"/>
-        </svg>
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.295 6.655L15 5.95L10 1L9.345 1.71L9.935 2.3L4.19 7.16L3.33 6.305L2.625 7L5.455 9.84L1 14.29L1.705 15L6.16 10.545L9 13.375L9.695 12.665L8.84 11.81L13.7 6.065L14.295 6.655ZM8.13 11.1L4.9 7.87L10.645 3L13 5.355L8.13 11.1Z" fill="current-color"/>
+</svg>
+
       `;
-        case 'lock-closed':
+        case 'pin-filled':
             return `
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 1C12.4853 1 14.5 3.01472 14.5 5.5V9H15C16.1046 9 17 9.89543 17 11V17C17 18.1046 16.1046 19 15 19H5C3.89543 19 3 18.1046 3 17V11C3 9.89543 3.89543 9 5 9H5.5V5.5C5.5 3.01472 7.51472 1 10 1ZM10 2.5C8.34315 2.5 7 3.84315 7 5.5V9H13V5.5C13 3.84315 11.6569 2.5 10 2.5Z" fill="currentColor"/>
-        </svg>
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.2929 6.65685L15 5.95L10 1L9.3429 1.7075L9.9358 2.30035L4.19 7.16125L3.33205 6.30335L2.625 7L5.4536 9.83865L1 14.2915L1.705 15L6.16055 10.5456L9 13.3741L9.69645 12.6671L8.83825 11.809L13.7002 6.06425L14.2929 6.65685Z" fill="current-color"/>
+</svg>
+
       `;
         default:
             return '';
@@ -109,11 +111,11 @@ const GslSideNav = class {
     }
     // ========== Render ==========
     render() {
-        return (h("nav", { key: 'b0455f7e65d4aaa0d47afb49fffcf91c7a88f9b1', class: {
+        return (h("nav", { key: 'fc6ee00d41ac9239127b5204109ccee59de417d9', class: {
                 'side-nav': true,
                 'expanded': this.isExpanded,
                 'locked': this.locked,
-            } }, h("button", { key: '624d90a3e05d1a3dd8498d9d571ba1402be09ad9', class: "lock-button", onClick: () => {
+            } }, h("button", { key: '679adc98e574ca33c42788502b942efb8360227f', class: "lock-button", onClick: () => {
                 const eventDetail = { source: 'lock-button' };
                 this.el.dispatchEvent(new CustomEvent('gsl:toggle-lock', {
                     bubbles: true,
@@ -127,7 +129,7 @@ const GslSideNav = class {
                         detail: { source: 'lock-button' }
                     }));
                 }
-            } }, "            ", h("span", { key: '61d71c4d2b420f60f0e1ee4fcd319aa65ce4f0ae', class: "lock-icon", innerHTML: getIcon(this.locked ? 'lock-closed' : 'lock-open') })), h("div", { key: 'bcb4f0ff0153b26af29c4ddd6d16862620f96db6', class: "nav-items" }, this.renderNavigation(this.navigationData.filter(item => !item.isNew && !item.isFeatured), 1)), h("div", { key: '8b866d712dd127d79ebe7d01d0a8ddc062048244', class: "new-featured" }, this.navigationData
+            } }, "            ", h("span", { key: '706bdd19732a654a86470d6f7b8299a58c424db6', class: "lock-icon", innerHTML: getIcon(this.locked ? 'pin-filled' : 'pin') })), h("div", { key: '30f21b15d1049e3a90fbe92ad9e4040f21d2fa36', class: "nav-items" }, this.renderNavigation(this.navigationData.filter(item => !item.isNew && !item.isFeatured), 1)), h("div", { key: '9a1dcd71582275177eb6e0e992c927dff43ecfb2', class: "new-featured" }, this.navigationData
             .filter(item => item.isNew || item.isFeatured)
             .map(item => (h("a", { class: "new-featured-link", href: item.href, target: item.target || '_self', onClick: e => {
                 if (item.onClickAction) {
