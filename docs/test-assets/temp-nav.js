@@ -7,12 +7,12 @@ const navData = [
   {
     "title": "Student Management",
     isNew: true,
-    "href": '/'
+    "href": '/gsl-component-library'
   },
   {
     "title": "Bulk Transition",
     isNew: true,
-    "href": '/'
+    "href": '/gsl-component-library'
   },
   {
     "title": "Leads",
@@ -361,12 +361,6 @@ const navData = [
                 "title": "By         Program",
                 "href": "/Accounting/Ledger/Programs.aspx"
               },
-              {
-                "title": ""
-              },
-              {
-                "title": "Show Parent Ledger Popup"
-              }
             ]
           },
           {
