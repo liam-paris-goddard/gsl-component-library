@@ -2,7 +2,7 @@ const navData = [
   {
     "title": "Bulk Enrollment",
     isNew: true,
-    "href": '/'
+    "href": '/bulk-enrollment'
   },
   {
     "title": "Student Management",
@@ -20,26 +20,26 @@ const navData = [
     "children": [
       {
         "title": "Search/View Leads",
-        "href": "/Leads/LeadCenter.aspx"
+        "href": "/test-page-1"
       },
       {
         "title": "Add New Lead",
-        "href": "/"
+        "href": "/test-page-2"
       },
       {
         "title": "Reporting",
         "children": [
           {
             "title": "Lead Activity",
-            "href": "/reports/leads/LeadConversionReport.aspx"
+            "href": "/test-page-3"
           },
           {
             "title": "Lead Activity Comparison",
-            "href": "/reports/leads/LeadConversionComparisonReport.aspx"
+            "href": "/test-page-4"
           },
           {
             "title": "Mailing Labels",
-            "href": "/reports/leads/LeadMailingLabelsReport.aspx"
+            "href": "/test-page-5"
           }
         ]
       }
