@@ -1,0 +1,253 @@
+:host {
+  display: block;
+  overflow: hidden;
+  font-family: var(--gsl-font-family, 'Ramona', sans-serif);
+  background-color: var(--gsl-nav-background, #002855);
+  color: #ffffff;
+  width: fit-content;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 64px; // Rail width default
+  transition: width 0.3s ease;
+
+  &.expanded {
+    width: 240px; // Expanded width
+  }
+}
+
+/* Top Lock Button */
+.lock-button {
+  padding: 1rem;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+
+.lock-icon,
+.chevron {
+  display: inline-block;
+  flex-shrink: 0;
+  line-height: 0;
+  vertical-align: middle;
+  transition: opacity 0.2s ease, transform 0.3s ease;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: currentColor;
+  }
+}
+
+/* Middle Navigation Scrollable Area */
+.nav-items {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+}
+
+/* Bottom New/Featured Section */
+.new-featured {
+  flex-shrink: 0;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+  min-height: 15vh;
+
+}
+
+.title {
+  white-space: normal;
+  word-break: break-word;
+  flex-grow: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  display: flex;
+}
+
+/* Navigation List and Nesting Levels */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+
+    .submenu,
+    .nav-link {
+      display: flex;
+      align-items: stretch;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      text-decoration: none;
+      color: white;
+
+      .icon {
+        margin-right: 0.75rem;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        flex-shrink: 0;
+      }
+
+      .title {
+        flex-grow: 1;
+      }
+
+      .chevron {
+        margin-left: auto;
+        transition: transform 0.3s;
+        flex-shrink: 0;
+        align-self: center;
+
+        &.rotated {
+          transform: rotate(180deg);
+        }
+
+      }
+    }
+
+    .submenu {
+      width: 100%;
+
+      .title {
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  }
+}
+
+/* Accordion Chevrons */
+.submenu.open .chevron {
+  transform: rotate(180deg);
+}
+
+/* Dynamic Level Backgrounds */
+.level-1 {
+  background-color: #002855;
+}
+
+.level-2 {
+  background-color: #003C71;
+
+  .submenu,
+  .nav-link {
+    padding-left: 1.25rem;
+  }
+}
+
+.level-3 {
+  background-color: #00509D;
+
+  .submenu,
+  .nav-link {
+    padding-left: 1.75rem;
+  }
+}
+
+.level-4 {
+  background-color: #336EA5;
+
+  .submenu,
+  .nav-link {
+    padding-left: 2.25rem;
+  }
+}
+
+/* Expanded Specific Styles */
+.expanded .icon {
+  display: inline-block;
+}
+
+.side-nav:not(.expanded) .icon {
+  display: block;
+  margin: 0 auto;
+}
+
+.side-nav:not(.expanded) .title {
+  display: none;
+}
+
+.side-nav:not(.expanded) .new-featured-link {
+  display: none;
+}
+
+
+
+
+.new-featured-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+
+  .title {
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: 0.75rem;
+  }
+
+
+  .pill {
+    background-color: #36a832; // Green for "New" (adjustable)
+    color: #fff;
+    font-size: 0.5rem;
+    font-weight: bold;
+    border-radius: 9999px;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.75rem;
+    text-transform: uppercase;
+  }
+}
+
+.submenu:hover,
+.submenu:focus,
+.nav-link:hover,
+.nav-link:focus,
+.new-featured-link:hover,
+.new-featured-link:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+.submenu:focus,
+.nav-link:focus,
+.new-featured-link:focus {
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.lock-button:hover,
+.lock-button:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+.lock-button:focus {
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.lock-button,
+.submenu {
+  background: none;
+  border: none;
+  font: inherit;
+  padding: 0.75rem;
+  color: white;
+  cursor: pointer;
+}

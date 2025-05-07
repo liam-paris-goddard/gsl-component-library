@@ -1,0 +1,55 @@
+/*@use "@carbon/type/scss/font-family";
+@use "@carbon/type/scss/scale";
+@use "@carbon/type/scss/styles";
+@use 'sass:map';
+// Carbon Token Overrides for Color and Typography
+@use "@carbon/styles/scss/themes" as *;
+@use "@carbon/styles/scss/theme" with ($theme: (interactive-01: #0f62fe,
+    interactive-02: #393939,
+    ui-background: #ffffff,
+    background: #f4f4f4,
+    text-primary: #161616,
+    text-secondary: #525252,
+    link-primary: #0f62fe,
+    link-visited: #6929c4,
+    icon-primary: #161616,
+    icon-secondary: #8d8d8d,
+    border-subtle: #e0e0e0,
+    border-strong: #8d8d8d));
+
+
+
+// Emit IBM Plex Sans font-face declarations
+@include font-face.ibm-plex-sans();
+
+// Optionally apply global type reset
+@include styles.type-reset();
+
+// Export key Carbon token values as CSS custom properties for your own components
+:root {
+  // Color Tokens
+  --gsl-color-bg: #{theme.$background};
+  --gsl-color-text: #{theme.$text-primary};
+  --gsl-color-subtle-border: #{theme.$border-subtle};
+  --gsl-color-strong-border: #{theme.$border-strong};
+  --gsl-color-link: #{theme.$link-primary};
+  --gsl-color-icon: #{theme.$icon-primary};
+
+  // Typography Tokens
+  --gsl-font-family: 'IBM Plex Sans', sans-serif;
+  --gsl-font-size-body: #{scale.$body-01};
+  --gsl-font-size-heading: #{scale.$heading-03};
+}
+
+
+@each $token, $value in theme.$tokens {
+  @debug '#{$token}: #{$value}';
+}
+
+@use '@carbon/styles/scss/type' with (
+  $font-family-sans: 'Noto Sans', sans-serif,
+  $font-family-display: 'Ramona', sans-serif,
+  $font-family-brand: 'QuickSand', sans-serif
+);
+
+*/
