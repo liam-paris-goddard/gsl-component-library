@@ -111,11 +111,11 @@ const GslSideNav = class {
     }
     // ========== Render ==========
     render() {
-        return (h("nav", { key: 'fc6ee00d41ac9239127b5204109ccee59de417d9', class: {
+        return (h("nav", { key: 'ea2e314edd1bd5a7c3cfee42606f6ed7eed4347a', class: {
                 'side-nav': true,
                 'expanded': this.isExpanded,
                 'locked': this.locked,
-            } }, h("button", { key: '679adc98e574ca33c42788502b942efb8360227f', class: "lock-button", onClick: () => {
+            } }, h("button", { key: 'd480ffc2642b455bb5dbc64b897ddec340d5f82e', class: "lock-button", onClick: () => {
                 const eventDetail = { source: 'lock-button' };
                 this.el.dispatchEvent(new CustomEvent('gsl:toggle-lock', {
                     bubbles: true,
@@ -129,7 +129,7 @@ const GslSideNav = class {
                         detail: { source: 'lock-button' }
                     }));
                 }
-            } }, "            ", h("span", { key: '706bdd19732a654a86470d6f7b8299a58c424db6', class: "lock-icon", innerHTML: getIcon(this.locked ? 'pin-filled' : 'pin') })), h("div", { key: '30f21b15d1049e3a90fbe92ad9e4040f21d2fa36', class: "nav-items" }, this.renderNavigation(this.navigationData.filter(item => !item.isNew && !item.isFeatured), 1)), h("div", { key: '9a1dcd71582275177eb6e0e992c927dff43ecfb2', class: "new-featured" }, this.navigationData
+            } }, "            ", h("span", { key: '3af6d8233940c1b84cc576dd5ed243b50b18f352', class: "lock-icon", innerHTML: getIcon(this.locked ? 'pin-filled' : 'pin') })), h("div", { key: '5021d02e8d7e5f264788dbc9b31c564808a3bb4d', class: "nav-items" }, this.renderNavigation(this.navigationData.filter(item => !item.isNew && !item.isFeatured), 1)), h("div", { key: 'e5da6965c7eab1903897eee5bf04b59871eaf512', class: "new-featured" }, this.navigationData
             .filter(item => item.isNew || item.isFeatured)
             .map(item => (h("a", { class: "new-featured-link", href: item.href, target: item.target || '_self', onClick: e => {
                 if (item.onClickAction) {

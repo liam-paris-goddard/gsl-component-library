@@ -13,6 +13,7 @@ const GslShell = class {
     currentPath;
     pageTitle;
     logoSrc;
+    logoHref;
     isExpanded = false;
     locked = false;
     gslToggleSidenav;
@@ -47,7 +48,7 @@ const GslShell = class {
         localStorage.setItem('gsl-shell-locked', 'false');
     }
     render() {
-        return (h("div", { key: '459ddefe17c1214aabae8f6ab1d4adb689fba742', class: "shell" }, h("header", { key: '62ffde61f25900970ce21b38f82c145ccb826207', class: "header" }, h("gsl-header", { key: '132ed183b04a7970347e51422fea311ed9a98f9e', pageTitle: this.pageTitle, logoSrc: this.logoSrc, navExpanded: this.isExpanded }, h("slot", { key: '7f9f503ee34d65ceff80c06e2f2a1fd9c3948f41', name: "header-center", slot: "center" }), h("slot", { key: 'a2ca6fc1b05be1f8ac2c50758897096034d221cf', name: "header-right", slot: "right-actions" }))), h("div", { key: '199a49de653086c56d1f4b8631a46f4c69f81e55', class: "main" }, h("gsl-side-nav", { key: 'a54c34209928a97307d78f73ae2709b06a48351e', navigationData: this.navigationData, currentPath: this.currentPath, locked: this.locked, isExpanded: this.isExpanded }), h("div", { key: '1bad650a20da0e57b3303d2aa300c6953f84af63', class: "content-area" }, h("main", { key: '98e092c783d1d6bf7d69c1c379712ff243934238' }, h("slot", { key: 'ec558e78d4fd0012977ba68be11872be76275b4d' }))))));
+        return (h("div", { key: 'a39455e365415efcf218b138b8979893ff8deec1', class: "shell" }, h("header", { key: '6c7a8838d688a876e46cd0d3ef4a92ab0cc26432', class: "header" }, h("gsl-header", { key: '88198afaf295fce0136961d77057000805ee5420', pageTitle: this.pageTitle, logoSrc: this.logoSrc, navExpanded: this.isExpanded, logoHref: this.logoHref }, h("slot", { key: '0ca125e2957b9e02abe9492a88b03444167bda37', name: "header-center", slot: "center" }), h("slot", { key: 'd9e02a21decfeb79af62d02a3e680a02a02583da', name: "header-right", slot: "right-actions" }))), h("div", { key: '192fafc246486c24ed44a7661dcb96cf80d1b3fd', class: "main" }, h("gsl-side-nav", { key: 'a0837143771bf943098083591e884936cbf10af0', navigationData: this.navigationData, currentPath: this.currentPath, locked: this.locked, isExpanded: this.isExpanded }), h("div", { key: 'e96c024137c3f2e43b01201f67e93d064515db80', class: "content-area" }, h("main", { key: '29d17fed3ad5477b43ff8d1975698fc5cd4cc8e8' }, h("slot", { key: 'c600215081f10e821a66589dd25322c4652ed704' }))))));
     }
 };
 GslShell.style = gslShellCss;
