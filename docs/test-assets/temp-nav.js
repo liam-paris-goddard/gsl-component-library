@@ -2,7 +2,7 @@ const navData = [
   {
     "title": "Bulk Enrollment",
     isNew: true,
-    "href": './bulk-enrollment.html'
+    "href": './gsl-component-library/bulk-enrollment.html'
   },
   {
     "title": "Student Management",
@@ -20,26 +20,26 @@ const navData = [
     "children": [
       {
         "title": "Search/View Leads",
-        "href": "./test-page-1.html"
+        "href": "./gsl-component-library/test-page-1.html"
       },
       {
         "title": "Add New Lead",
-        "href": "./test-page-2.html"
+        "href": "./gsl-component-library/test-page-2.html"
       },
       {
         "title": "Reporting",
         "children": [
           {
             "title": "Lead Activity",
-            "href": "./test-page-3.html"
+            "href": "./gsl-component-library/test-page-3.html"
           },
           {
             "title": "Lead Activity Comparison",
-            "href": "./test-page-4.html"
+            "href": "./gsl-component-library/test-page-4.html"
           },
           {
             "title": "Mailing Labels",
-            "href": "./test-page-5.html"
+            "href": "./gsl-component-library/test-page-5.html"
           }
         ]
       }
