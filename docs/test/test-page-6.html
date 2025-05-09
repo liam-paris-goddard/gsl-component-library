@@ -1,4 +1,15 @@
-<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Stencil Component Starter</title> <script type="module" src="build/gsl-component-library.esm.js" data-stencil></script> <script nomodule="" src="build/gsl-component-library.js" data-stencil></script> <link rel="stylesheet" href="build/gsl-component-library.css"> <style>html,
+<!doctype html>
+<html dir="ltr" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <title>Stencil Component Starter</title>
+    <script type="module" src="build/gsl.esm.js" data-stencil></script>
+    <script nomodule="" src="build/gsl.js" data-stencil></script>
+    <link rel="stylesheet" href="build/gsl.css">
+    <style>
+      html,
       body {
         margin: 0;
         padding: 0;
@@ -71,7 +82,37 @@
         display: flex;
         justify-content: flex-end;
 
-      }</style> </head> <body> <gsl-shell logo-href="/" navigation-data="navData" logo-src="test/test-assets/images/fms-logo-light.svg"> <div class="gsl-header-right-actions" slot="header-right"> <div class="school-picker-row"><button class="school-picker-button"><span>Paris, Liam at Weatherly, PA</span> <img src="test/test-assets/images/School.svg"></button></div> <div class="quick-actions-row"> <button> Help </button> <button> Terms of Use </button> <button> Contact Help Desk </button> <button> Logout </button> </div> </div> <main id="main-content"> <div style="height: 40vh; width: 30vw; background: gray;"> <h1 id="route-output">Home Page</h1></div> </main> </gsl-shell> <script src="test/test-assets/temp-nav.js"></script> <script>
+      }
+    </style>
+  </head>
+
+  <body>
+    <gsl-shell logo-href="/" navigation-data="navData" logo-src="test-assets/images/logo.svg">
+      <div class='gsl-header-right-actions' slot="header-right">
+        <div class="school-picker-row"><button class="school-picker-button"><span>Paris, Liam at Weatherly, PA</span> <img src="test-assets/images/School.svg"></button></div>
+        <div class="quick-actions-row">
+          <button>
+            Help
+          </button>
+          <button>
+            Terms of Use
+          </button>
+          <button>
+            Contact Help Desk
+          </button>
+          <button>
+            Logout
+          </button>
+        </div>
+      </div>
+      <main id="main-content">
+        <div style="height:40vh; width:30vw; background:gray;">
+        <h1 id="route-output">Test Page 6</h1></div>
+      </main>
+    </gsl-shell>
+
+    <script src="test-assets/temp-nav.js"></script>
+    <script>
       if ('serviceWorker' in navigator && location.protocol !== 'file:') {
         navigator.serviceWorker.getRegistration().then(function (registration) {
           if (registration) {
@@ -79,4 +120,7 @@
           }
         });
       }
-    </script> </body></html>
+    </script>
+  </body>
+
+</html>
